@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GiggleSense</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        .container {
+            text-align: center;
+        }
+        
+        h1 {
+            color: #333;
+        }
+        
+        form {
+            margin-top: 20px;
+        }
+        
+        textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 18px;
+            font-style: bold;
+            
+        }
+        
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>GiggleSense</h1>
+        <h4>Hey there! Welcome to GiggleSense </h4>
+        <h4>your go-to buddy for analyzing emotions in text with a splash of humor. Let's find the funny side of emotions together!</h4>
+        <form action="/analyze" method="post">
+            <textarea name="text" rows="4" cols="50"></textarea><br><br>
+            <input type="submit" value="Analyze">
+        </form>
+    </div>
+</body>
+</html>

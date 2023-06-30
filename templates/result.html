@@ -1,0 +1,100 @@
+<!-- result.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <style>
+        body {
+            text-align: center;
+            padding-top: 100px;
+            background-color: #f1f1f1;
+        }
+        .p {
+            font-size: 30px;
+            font-family: 'Times New Roman', Times, serif;
+            fill: #333;
+        }
+        h1 {
+            color: #333;
+            font-family: Arial, sans-serif;
+        }
+        .positive {
+            color: green;
+        }
+        .negative {
+            color: red;
+        }
+        .neutral {
+            color: orange;
+        }
+        .button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: Arial, sans-serif;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            border: 2px solid #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        th {
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+        }
+        td {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        .positive {
+            background-color: #DFF0D8;
+        }
+        .negative {
+            background-color: #F2DEDE;
+        }
+        .neutral {
+            background-color: #FCF8E3;
+        }
+        .emoji {
+            font-size: 20px;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Result</h1>
+    <dev>
+   <p style="font-size: 1.4em; text-align: center; width: 800px; margin: 0 auto;">Text: {{ text }}</p></dev>
+    <table>
+        <tr>
+            <th>Sentiment</th>
+            <th>Score</th>
+        </tr>
+        <tr>
+            <td class="positive"><span class="emoji">&#x1F603;</span>POSITIVE</td>
+            <td>{{ sentiment_scores.positive }}</td>
+        </tr>
+        <tr>
+            <td class="negative"><span class="emoji">&#x1F620;</span>NEGATIVE</td>
+            <td>{{ sentiment_scores.negative }}</td>
+        </tr>
+        <tr>
+            <td class="neutral"><span class="emoji">&#x1F610;</span>NEUTRAL</td>
+            <td>{{ sentiment_scores.neutral }}</td>
+        </tr>
+    </table>
+    <button class="button" onclick="window.location.href='/'">Go Back</button>
+</body>
+</html>
